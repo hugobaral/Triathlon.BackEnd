@@ -1,0 +1,19 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Local overrides for Claude Code (contains personal permission settings)
+.claude/settings.local.json
+
+# OS files
+.DS_Store
+Thumbs.db
