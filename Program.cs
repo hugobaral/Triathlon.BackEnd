@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -79,7 +80,12 @@ builder.Services.AddScoped<IEquipmentService, EquipmentService>();
 builder.Services.AddScoped<IProfileService, ProfileService>();
 
 // Controllers and OpenAPI
-builder.Services.AddControllers();
+// Enums (SportType, TrainingLevel, EquipmentCategory) are sent/received as
+// their string names (e.g. "Swim") rather than numeric indexes, matching the
+// Angular client's contract.
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 builder.Services.AddOpenApi();
 
 var app = builder.Build();

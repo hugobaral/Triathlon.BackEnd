@@ -10,7 +10,7 @@ namespace Triathlon.Api.Controllers;
 /// Manages the authenticated user's planned training sessions.
 /// </summary>
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/training-schedule")]
 [Authorize]
 public class TrainingScheduleController : ControllerBase
 {
