@@ -27,4 +27,14 @@ public class ApplicationUser : IdentityUser
     /// Gets or sets the user's self-declared training level.
     /// </summary>
     public TrainingLevel TrainingLevel { get; set; } = TrainingLevel.Beginner;
+
+    /// <summary>
+    /// Gets or sets the user's weight in kilograms, if provided.
+    /// </summary>
+    public double? WeightKg { get; set; }
+
+    /// <summary>
+    /// Gets or sets the user's height in centimeters, if provided.
+    /// </summary>
+    public double? HeightCm { get; set; }
 }

@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Triathlon.Api.Dtos;
 using Triathlon.Api.Models.Entities;
 using Triathlon.Api.Services;
-
 namespace Triathlon.Api.Controllers;
 
 /// <summary>

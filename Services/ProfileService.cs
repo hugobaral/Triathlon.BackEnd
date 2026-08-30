@@ -43,6 +43,8 @@ public class ProfileService : IProfileService
         user.LastName = profileDto.LastName;
         user.DateOfBirth = profileDto.DateOfBirth;
         user.TrainingLevel = profileDto.TrainingLevel;
+        user.WeightKg = profileDto.WeightKg;
+        user.HeightCm = profileDto.HeightCm;
 
         await _userManager.UpdateAsync(user);
 
@@ -78,5 +80,7 @@ public class ProfileService : IProfileService
         user.FirstName,
         user.LastName,
         user.DateOfBirth,
-        user.TrainingLevel);
+        user.TrainingLevel,
+        user.WeightKg,
+        user.HeightCm);
 }
